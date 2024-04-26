@@ -1,0 +1,112 @@
+{
+  "name": "@nx-pkg/storybook-addon-nxpkg",
+  "version": "0.0.5",
+  "description": "Create a one-click Pull Request environment right from your component",
+  "keywords": [
+    "storybook-addons",
+    "nxpkg",
+    "pull-request",
+    "ide",
+    "code"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nxpkg/storybook-addon-nxpkg"
+  },
+  "type": "module",
+  "author": "Tomek Sułkowski <tomek@nx-pkg.com>",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./preview": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/preview.js",
+      "require": "./dist/preview.js"
+    },
+    "./preset": "./dist/preset.cjs",
+    "./manager": "./dist/manager.js",
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "prebuild": "npm run clean",
+    "build": "tsup",
+    "build:watch": "npm run build -- --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run-p build:watch 'storybook --quiet'",
+    "prerelease": "zx scripts/prepublish-checks.js",
+    "release": "npm run build && auto shipit",
+    "eject-ts": "zx scripts/eject-typescript.js",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.0.0",
+    "@storybook/addon-interactions": "^8.0.0",
+    "@storybook/addon-links": "^8.0.0",
+    "@storybook/react": "^8.0.0",
+    "@storybook/react-vite": "^8.0.0",
+    "@storybook/testing-library": "^0.2.2",
+    "@types/node": "^20.11.28",
+    "@types/react": "^18.2.66",
+    "@vitejs/plugin-react": "^4.2.1",
+    "auto": "^11.1.1",
+    "boxen": "^7.1.1",
+    "dedent": "^1.5.1",
+    "ini": "^4.1.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.2.5",
+    "prompts": "^2.4.2",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
+    "storybook": "^8.0.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6",
+    "zx": "^7.2.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bundler": {
+    "exportEntries": [
+      "src/index.ts"
+    ],
+    "managerEntries": [
+      "src/manager.ts"
+    ],
+    "previewEntries": [
+      "src/preview.ts"
+    ]
+  },
+  "storybook": {
+    "displayName": "StackBlitz",
+    "supportedFrameworks": [
+      "react",
+      "vue",
+      "angular",
+      "web-components",
+      "ember",
+      "html",
+      "svelte",
+      "preact",
+      "react-native"
+    ],
+    "icon": "https://user-images.githubusercontent.com/1511906/272314785-d8b5c029-8633-4d16-8a9e-5d5fe8456aeb.png"
+  }
+}
