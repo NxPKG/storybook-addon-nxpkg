@@ -7,7 +7,7 @@
 
 #### Authors: 1
 
--  Tomek Sułkowski ([@sulco](https://github.com/sulco))
+-  Nx Pkg ([@sulco](https://github.com/sulco))
 
 ---
 
@@ -26,4 +26,4 @@
 
 #### Authors: 1
 
--  Tomek Sułkowski ([@sulco](https://github.com/sulco))
+-  Nx Pkg ([@sulco](https://github.com/sulco))
