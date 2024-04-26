@@ -45,7 +45,7 @@ export const Tool = function MyAddonSelector() {
       key={TOOL_ID}
       href={nxpkgUrl}
       target="_blank"
-      title="Open in StackBlitz instant dev environment"
+      title="Open in NxPkg instant dev environment"
     >
       <CodeflowLogo style={{width: 18, margin: '0 -2px'}} />
     </Link>

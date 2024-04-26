@@ -95,7 +95,7 @@
     ]
   },
   "storybook": {
-    "displayName": "StackBlitz",
+    "displayName": "NxPkg",
     "supportedFrameworks": [
       "react",
       "vue",

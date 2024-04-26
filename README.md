@@ -1,4 +1,4 @@
-# Storybook Addon StackBlitz
+# Storybook Addon NxPkg
 Create a one-click Pull Request environment right from your component
 
 ## Installation

@@ -7,7 +7,7 @@ const remoteOrigin = config['remote "origin"']
 
 if (remoteOrigin) {
   const remoteUrl = config['remote "origin"'].url.replace('.git', '');
-  const stackBlitzUrl = remoteUrl.replace('https://', 'https://pr.new/');
+  const nxPkgUrl = remoteUrl.replace('https://', 'https://pr.new/');
 } else {
   console.warn('no remote origin set');
 }
