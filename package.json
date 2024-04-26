@@ -14,7 +14,7 @@
     "url": "https://github.com/nxpkg/storybook-addon-nxpkg"
   },
   "type": "module",
-  "author": "Tomek Sułkowski <tomek@nx-pkg.com>",
+  "author": "Nx Pkg <tomek@nx-pkg.com>",
   "license": "MIT",
   "exports": {
     ".": {
